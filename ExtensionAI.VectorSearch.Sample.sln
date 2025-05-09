@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.13.35931.197
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtensionAI.VectorSerach.Sample.Api", "ExtensionAI.VectorSerach.Sample.Api\ExtensionAI.VectorSerach.Sample.Api.csproj", "{DED6746D-F1E0-44A2-A416-4B0208D79B2A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtensionAI.VectorSearch.Sample.Api", "ExtensionAI.VectorSearch.Sample.Api\ExtensionAI.VectorSearch.Sample.Api.csproj", "{576B52D3-3CF6-873D-FD24-A06CCC0238A3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{DED6746D-F1E0-44A2-A416-4B0208D79B2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DED6746D-F1E0-44A2-A416-4B0208D79B2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DED6746D-F1E0-44A2-A416-4B0208D79B2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DED6746D-F1E0-44A2-A416-4B0208D79B2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{576B52D3-3CF6-873D-FD24-A06CCC0238A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{576B52D3-3CF6-873D-FD24-A06CCC0238A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{576B52D3-3CF6-873D-FD24-A06CCC0238A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{576B52D3-3CF6-873D-FD24-A06CCC0238A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
