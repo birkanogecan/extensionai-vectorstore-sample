@@ -1,0 +1,6 @@
+@ExtensionAI.VectorSerach.Sample.Api_HostAddress = http://localhost:5145
+
+GET {{ExtensionAI.VectorSerach.Sample.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
