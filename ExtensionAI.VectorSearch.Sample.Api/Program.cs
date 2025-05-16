@@ -34,7 +34,7 @@ new Product { Id = 8, Name = "4K Monitor", Description = "27-inch 4K UHD monitor
 new Product { Id = 9, Name = "External SSD", Description = "1TB portable SSD with fast read/write speeds.", Category = "Storage", Price = 129.99m, Barcode = "EXTSSD-009" },
 new Product { Id = 10, Name = "Wireless Charger", Description = "Fast wireless charger compatible with most devices.", Category = "Accessories", Price = 29.99m, Barcode = "WCHARG-010" },
 new Product { Id = 11, Name = "Standard Keyboard", Description = "Standard keyboard with adjustable DPI.", Category = "Electronics", Price = 29.99m, Barcode = "SKEY-011" }
-};
+}; 
 
 var ollamaUri = new Uri("http://localhost:11434/");
 
