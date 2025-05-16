@@ -9,7 +9,6 @@ using Microsoft.SemanticKernel.Connectors.InMemory;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
 var app = builder.Build();
@@ -64,6 +63,10 @@ app.MapGet("/search", (string query) =>
       return GetResponse(query);
 })
 .WithName("Search");
+
+app.Run();
+
+
 async Task<string> GetResponse(string query)
 {
     var chatOptions = new ChatOptions
@@ -77,9 +80,10 @@ async Task<string> GetResponse(string query)
             ]
     };
 
+    
     var chatMessages = new List<ChatMessage>();
 
-    chatMessages.Add(new ChatMessage(ChatRole.System, "Sen bir e‑ticaret asistanısın. ürünler ili ilgili bilgi almak istendiğinde methodları çağırabilirsin, method çağrısı yaptığında sana kullanıcının aramak istediği en yakın ürün veya ürünlerin bilgisi json formatında dönecek. bu bilgilerin içerisinde ürün ismi, açıklaması, kategorisi ve fiyatı olacak. bu sonucu yorumlayıp, kullanıcının istediği bilgiyi dönebilirsin."));
+    chatMessages.Add(new ChatMessage(ChatRole.System, "Sen bir e‑ticaret asistanısın. ürünler ili ilgili bilgi almak istendiğinde metotları çağırabilirsin, metot çağrısı yaptığında sana kullanıcının aramak istediği en yakın ürün veya ürünlerin bilgisi json formatında dönecek. bu bilgilerin içerisinde ürün ismi, açıklaması, kategorisi ve fiyatı olacak. bu sonucu yorumlayıp, kullanıcının istediği bilgiyi dönebilirsin."));
 
     chatMessages.Add(new ChatMessage(ChatRole.User, "/no_think " + query));
 
@@ -87,9 +91,6 @@ async Task<string> GetResponse(string query)
 
     return response.ToString();
 }
-
-app.Run();
-
 
 // -------------------- AI FUNCTIONS --------------------
 
@@ -108,7 +109,7 @@ async Task<string> VectorSearchAsync([Description("ürün adı veya tipi")] stri
     var results = productsVector.SearchEmbeddingAsync(vector, 5, options);
 
     var list = new List<ProductSearchResult>();
-
+    
     await foreach (var d in results)
     {
         if (d.Score > 0.3)//score kontrolü ile en uygun ürünlerin listelenmesi sağlanıyor.
