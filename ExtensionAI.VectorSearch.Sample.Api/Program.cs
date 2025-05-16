@@ -182,3 +182,12 @@ async Task<string> ProductSearchWithIdAsync([Description("ürün barkodu")] stri
 
     return jsonResult;
 }
+async Task TestAsync()
+{
+    var vector = await _vectorGenerator.GenerateVectorAsync("Wireless Mouse"); // changed to await
+    var result = productsVector.SearchEmbeddingAsync(vector, 5); // changed to vector
+    await foreach (var item in result)
+    {
+        Console.WriteLine(item.Record.Name);
+    }
+}
